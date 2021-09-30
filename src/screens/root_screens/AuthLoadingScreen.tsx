@@ -3,9 +3,9 @@ import React, { memo, useState, useEffect } from "react";
 import { ImageBackground, ActivityIndicator } from "react-native";
 import firebase from "firebase/app";
 import "firebase/auth";
-import { Navigation } from "../../types";
-import { theme } from "../core/theme";
-import { FIREBASE_CONFIG } from "../core/config";
+import { Navigation } from "../../../types";
+import { theme } from "../../core/theme";
+import { FIREBASE_CONFIG } from "../../core/config";
 
 // Initialize Firebase
 firebase.initializeApp(FIREBASE_CONFIG);

@@ -5,11 +5,11 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
 // IMPORT SCREENS
-import LoginScreen from '../src/screens/LoginScreen';
-import RegisterScreen from '../src/screens/RegisterScreen';
-import AuthLoadingScreen from '../src/screens/AuthLoadingScreen';
-import NotFoundScreen from '../src/screens/NotFoundScreen';
-import ForgotPasswordScreen from '../src/screens/ForgotPasswordScreen';
+import LoginScreen from '../src/screens/root_screens/LoginScreen';
+import RegisterScreen from '../src/screens/root_screens/RegisterScreen';
+import AuthLoadingScreen from '../src/screens/root_screens/AuthLoadingScreen';
+import NotFoundScreen from '../src/screens/root_screens/NotFoundScreen';
+import ForgotPasswordScreen from '../src/screens/root_screens/ForgotPasswordScreen';
 
 // // IMPORT OTHERS
 import AdminBottomTabNavigator from './AdminBottomTabNavigator';

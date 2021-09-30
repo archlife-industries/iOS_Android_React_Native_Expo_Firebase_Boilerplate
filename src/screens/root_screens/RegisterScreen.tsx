@@ -1,17 +1,17 @@
-import Logo from "../../components/Logo";
-import Button from "../../components/Button";
-import TextInput from "../../components/TextInput";
-import Toast from "../../components/Toast";
+import Logo from "../../../components/Logo";
+import Button from "../../../components/Button";
+import TextInput from "../../../components/TextInput";
+import Toast from "../../../components/Toast";
 import firebase from "firebase/app";
 import RNPickerSelect from 'react-native-picker-select';
-import { theme } from "../core/theme";
-import { Navigation } from "../../types";
-import { emailValidator, passwordValidator, nameValidator } from "../core/utils";
-import { signInUser } from "../../api/auth-api";
+import { theme } from "../../core/theme";
+import { Navigation } from "../../../types";
+import { emailValidator, passwordValidator, nameValidator } from "../../core/utils";
+import { signInUser } from "../../../api/auth-api";
 import React, { memo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, KeyboardAvoidingView, TouchableOpacity } from "react-native";
-import Colors from '../../constants/Colors';
-import useColorScheme from '../../hooks/useColorScheme';
+import Colors from '../../../constants/Colors';
+import useColorScheme from '../../../hooks/useColorScheme';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 type Props = { navigation: Navigation; };
@@ -102,46 +102,7 @@ const RegisterScreen = ({ navigation }: Props) => {
           <Text style={{ color: Colors[colorScheme].subtext, fontWeight: "500" }}>← BACK</Text>
         </TouchableOpacity>
         <Logo />
-        <Text style={{ color: Colors[colorScheme].loginRegisterForgotPass, fontWeight: "bold", fontSize: 30, marginTop: "-5%", marginBottom: "5%" }}>JOIN THE CLUB</Text>
-        <View style={styles.row}>
-          <View style={styles.leftColumn}>
-            <Text style={{ color: Colors[colorScheme].subtext, textAlign: "center", marginLeft: 0, marginRight: 0, marginBottom: 0, fontSize: 14, fontWeight: "bold" }}>Upon signup, you will be unable to change your email address.</Text>
-          </View>
-          <View style={styles.rightColumn}>
-            <View style={styles.pickerContainer}>
-              <Text style={{ color: Colors[colorScheme].subtext, textAlign: "center", marginTop: 6, marginLeft: 0, marginRight: 0, marginBottom: 4, fontSize: 14, fontWeight: "bold" }}>Year of birth?</Text>
-              <View style={styles.picker}>
-                {/* <RNPickerSelect onValueChange={(inputValue) => setTrainerValue(inputValue)} items={trainersList} style={{
-                  inputIOS: {
-                    color: Colors[colorScheme].text,
-                    fontSize: 15,
-                    fontWeight: "bold"
-                  },
-                  inputAndroid: {
-                    color: Colors[colorScheme].text,
-                    fontSize: 15,
-                  },
-                  placeholderColor: Colors[colorScheme].text,
-                  underline: { borderTopWidth: 0 },
-                  icon: {
-                    position: 'absolute',
-                    backgroundColor: 'transparent',
-                    borderTopWidth: 5,
-                    borderTopColor: '#00000099',
-                    borderRightWidth: 5,
-                    borderRightColor: 'transparent',
-                    borderLeftWidth: 5,
-                    borderLeftColor: 'transparent',
-                    width: 0,
-                    height: 0,
-                    top: 20,
-                    right: 15,
-                  },
-                }} /> */}
-              </View>
-            </View>
-          </View>
-        </View>
+        <Text style={{ color: Colors[colorScheme].loginRegisterForgotPass, fontWeight: "bold", fontSize: 30, marginTop: "0%", marginBottom: "5%" }}>JOIN THE CLUB</Text>
         <TextInput label="👤 First Name" returnKeyType="next" value={firstName.value} onChangeText={text => setFirstName({ value: text, error: "" })} error={!!firstName.error} errorText={firstName.error} theme={{ colors: { primary: "#1C1C1C" } }} selectionColor={'#777777'} style={styles.textInput} />
         <TextInput label="👥 Last Name" returnKeyType="next" value={lastName.value} onChangeText={text => setLastName({ value: text, error: "" })} error={!!lastName.error} errorText={lastName.error} theme={{ colors: { primary: "#1C1C1C" } }} selectionColor={'#777777'} style={styles.textInput} />
         <TextInput label="✉️ Email" returnKeyType="next" value={email.value} onChangeText={text => setEmail({ value: text, error: "" })} error={!!email.error} errorText={email.error} autoCapitalize="none" autoCompleteType="email" textContentType="emailAddress" keyboardType="email-address" theme={{ colors: { primary: "#1C1C1C" } }} selectionColor={'#777777'} style={styles.textInput} />

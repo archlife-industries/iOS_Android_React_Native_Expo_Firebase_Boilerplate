@@ -1,15 +1,15 @@
-import Logo from "../../components/Logo";
-import Button from "../../components/Button";
-import TextInput from "../../components/TextInput";
+import Logo from "../../../components/Logo";
+import Button from "../../../components/Button";
+import TextInput from "../../../components/TextInput";
 import React, { memo, useState } from "react";
 import { TouchableOpacity, StyleSheet, Text, View, ImageBackground, KeyboardAvoidingView } from "react-native";
-import { theme } from "../core/theme";
-import { emailValidator, passwordValidator } from "../core/utils";
-import { Navigation } from "../../types";
-import { loginUser } from "../../api/auth-api";
-import Toast from "../../components/Toast";
-import Colors from '../../constants/Colors';
-import useColorScheme from '../../hooks/useColorScheme';
+import { theme } from "../../core/theme";
+import { emailValidator, passwordValidator } from "../../core/utils";
+import { Navigation } from "../../../types";
+import { loginUser } from "../../../api/auth-api";
+import Toast from "../../../components/Toast";
+import Colors from '../../../constants/Colors';
+import useColorScheme from '../../../hooks/useColorScheme';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 type Props = {

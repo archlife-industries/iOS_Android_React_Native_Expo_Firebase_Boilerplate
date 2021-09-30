@@ -1,15 +1,15 @@
 import React, { memo, useState } from "react";
 import { StyleSheet, ImageBackground, KeyboardAvoidingView, Text, TouchableOpacity } from "react-native";
-import { emailValidator } from "../core/utils";
-import Logo from "../../components/Logo";
-import TextInput from "../../components/TextInput";
-import { theme } from "../core/theme";
-import Button from "../../components/Button";
-import { Navigation } from "../../types";
-import { sendEmailWithPassword } from "../../api/auth-api";
-import Toast from "../../components/Toast";
-import Colors from '../../constants/Colors';
-import useColorScheme from '../../hooks/useColorScheme';
+import { emailValidator } from "../../core/utils";
+import Logo from "../../../components/Logo";
+import TextInput from "../../../components/TextInput";
+import { theme } from "../../core/theme";
+import Button from "../../../components/Button";
+import { Navigation } from "../../../types";
+import { sendEmailWithPassword } from "../../../api/auth-api";
+import Toast from "../../../components/Toast";
+import Colors from '../../../constants/Colors';
+import useColorScheme from '../../../hooks/useColorScheme';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 type Props = {
