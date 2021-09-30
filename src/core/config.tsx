@@ -13,4 +13,3 @@ import 'firebase/firestore';
 //   PLIST_VERSION: "2",
 //   // appId: "" // App store ID number, retireved from iOS App Store
 // };
-
