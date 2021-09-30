@@ -19,7 +19,7 @@ type Props = {
 export default function ProfileScreen({ navigation }: Props) {
 
   const userEmail = firebase.auth().currentUser.email;
-  const [photoURL, setPhotoURL] = useState("https://archlife.org/wp-content/uploads/2020/07/cropped-AI-Archlife-Industries-Icon-DarkGrey-Background.png");
+  const [photoURL, setPhotoURL] = useState("https://github.com/landscapesupply/images/blob/main/landscape_supply_app_default_profile_icon.png?raw=true");
   const [emailUsername, setEmailUsername] = useState("");
   const [emailSuffix, setEmailSuffix] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -29,7 +29,7 @@ export default function ProfileScreen({ navigation }: Props) {
   const colorScheme = useColorScheme();
   const [savedChangesTextColor, setSavedChangesTextColor] = useState(Colors[colorScheme].background)
   // TEMP VARIABLES TO HOLD USER INPUT
-  const [tempPhotoURL, setTempPhotoURL] = useState("https://archlife.org/wp-content/uploads/2020/07/cropped-AI-Archlife-Industries-Icon-DarkGrey-Background.png");
+  const [tempPhotoURL, setTempPhotoURL] = useState("https://github.com/landscapesupply/images/blob/main/landscape_supply_app_default_profile_icon.png?raw=true");
   const [tempFirstName, setTempFirstName] = useState("");
   const [tempLastName, setTempLastName] = useState("");
   const [tempHeight, setTempHeight] = useState(0);

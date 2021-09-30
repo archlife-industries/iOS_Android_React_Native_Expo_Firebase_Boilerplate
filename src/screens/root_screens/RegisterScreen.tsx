@@ -69,7 +69,7 @@ const RegisterScreen = ({ navigation }: Props) => {
       email: email.value.toLowerCase(),
       // trainer: trainer.value,
       phone: 1234567890,
-      photoURL: "https://archlife.org/wp-content/uploads/2020/07/cropped-AI-Archlife-Industries-Icon-DarkGrey-Background.png",
+      photoURL: "https://github.com/landscapesupply/images/blob/main/landscape_supply_app_default_profile_icon.png?raw=true",
       isActive: true,
       userType: "admin"
     }).then(() => { console.log('New user added!'); });
