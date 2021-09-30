@@ -10,6 +10,7 @@ import { logoutUser } from "../../../api/auth-api";
 import { Navigation } from "../../../types";
 import Colors from '../../../constants/Colors';
 import useColorScheme from '../../../hooks/useColorScheme';
+import { avatar_image_theme } from "../../../src/core/theme";
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 type Props = {
@@ -58,7 +59,7 @@ export default function ProfileScreen({ navigation }: Props) {
       <KeyboardAvoidingView style={styles.keyboardavoidcontainer} behavior="padding">
       <View style={styles.upperrow}>
         <View style={styles.column}>
-          <Avatar.Image source={{ uri: photoURL }} size={verticalScale(125)} style={styles.profilePhoto} />
+          <Avatar.Image source={{ uri: photoURL }} size={verticalScale(125)} style={styles.profilePhoto} theme={avatar_image_theme} />
         </View>
         <View style={styles.column}>
           <Text style={{ fontSize: verticalScale(32), fontWeight: 'bold', color: Colors[colorScheme].firstName }} numberOfLines={1} adjustsFontSizeToFit>{emailUsername.toUpperCase()}</Text>

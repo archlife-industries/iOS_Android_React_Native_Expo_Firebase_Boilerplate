@@ -11,3 +11,13 @@ export const theme = {
     success: "#72fa41"
   }
 };
+
+export const avatar_image_theme = {
+  ...DefaultTheme,
+  // roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#24ccff99',
+    accent: '#72fa4199',
+  },
+};
